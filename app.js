@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
 
-mongoose.connect(process.env.MONGO_URI).then(() => console.log('connected to DB!')).catch(() => console.log("not connected to DB"));
+mongoose.connect("mongodb+srv://mohammadramiturki_db_user:IPXdN0O8OTloANk9@cluster0.9fh8ihs.mongodb.net/firstDB").then(() => console.log('connected to DB!')).catch(() => console.log("not connected to DB"));
 
 
 app.use(express.json());
