@@ -19,5 +19,5 @@ app.use("/api/auth", require("./routers/auth"));
 app.use("/password", require("./routers/password"));
 
 
-const Port = process.env.PORT;
+const Port = process.env.PORT || 8000;
 app.listen(Port, () => console.log(`connected to port: ${Port}`));
