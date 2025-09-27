@@ -37,9 +37,9 @@ const sendEmail = asyncHandler(async (req, res) => {
     };
     transporter.sendMail(mailOption, (err, success) => {
         if (err) {
-            res.status(400).json({ message: err.message });
+            return res.status(400).json({ message: err.message });
         }
-        res.status(200).json({ message: "email sent succefully", success });
+        return res.status(200).json({ message: "email sent succefully", success });
     });
 });
 
