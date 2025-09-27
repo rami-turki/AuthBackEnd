@@ -22,8 +22,9 @@ const sendEmail = asyncHandler(async (req, res) => {
     const transporter = nodemailer.createTransport({
         // 1. حدد المضيف والمنفذ والبروتوكول يدوياً
         host: "smtp.gmail.com",
-        port: 465, // منفذ SSL/TLS
-        secure: true, // ⚠️ إلزامي للمنفذ 465
+        port: 587, // منفذ SSL/TLS
+        secure: false, // ⚠️ إلزامي للمنفذ 465
+        requireTLS: true,
 
         auth: {
             user: process.env.NOTI_EMAIL,
